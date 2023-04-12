@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" media="screen" href="Index.css" />
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <title>Atividade Web</title>
+    </head>
+    <body>
+        <p class="title">Atividade Extra Web</p>
+        <div class="container">
+          <div class="button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAtividade1">Atividade 1</div>
+          <div class="button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAtividade2" onclick="onClickPar()">Atividade 2</div>
+          <div class="button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAtividade3" onclick="onClickSomaParImpar()">Atividade 3</div>
+          <div class="button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAtividade4">Atividade 4</div>
+          <div class="button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAtividade5">Atividade 5</div>
+          <div class="button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAtividade6">Atividade 6</div>
+        </div>
+
+        <!-- Modal Atividade 1-->
+        <div class="modal fade" id="modalAtividade1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+            
+                    <div class="modal-header">
+                    <h4 class="modal-title">Atividade 1 - Multiplicação</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+            
+                    <div class="modal-body">
+
+                        <div class="input-group mb-3 div-atv1">
+                            <input type="number" class="form-control" id="text-multiplication" placeholder="*Insira um número">
+                            <button class="btn btn-success" type="submit" onclick="onClickMultiplication(document.getElementById('text-multiplication').value)">Calcular!</button>
+                        </div>
+
+                        <p id="result-text"></p>
+                    </div>
+                
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+
+          <!-- Modal Atividade 2-->
+          <div class="modal fade" id="modalAtividade2">
+            <div class="modal-dialog">
+                <div class="modal-content">
+            
+                    <div class="modal-header">
+                    <h4 class="modal-title">Atividade 2 - Números pares de 1 a 100</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+            
+                    <div class="modal-body">
+                        <p id="result-text-par"></p>
+                    </div>
+                
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+
+         <!-- Modal Atividade 3-->
+         <div class="modal fade" id="modalAtividade3">
+            <div class="modal-dialog">
+                <div class="modal-content">
+            
+                    <div class="modal-header">
+                    <h4 class="modal-title">Atividade 3 - Soma dos números pares e ímpares de 1 a 100</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+            
+                    <div class="modal-body">
+                        <p id="result-text-soma"></p>
+                    </div>
+                
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          <!-- Modal Atividade 4-->
+          <div class="modal fade" id="modalAtividade4">
+            <div class="modal-dialog">
+                <div class="modal-content">
+            
+                    <div class="modal-header">
+                        <h4 class="modal-title">Atividade 4 - Troca de valores das variáveis</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                
+                    <div class="modal-body">
+                        <input type="text" class="form-text form-control" id="text-a" placeholder="*Insira um número">
+                        <input type="text" class="form-text form-control" id="text-b" placeholder="*Insira outro número">
+
+                        <button class="btn btn-success mt-1" type="submit" onclick="onClickTroca(document.getElementById('text-a').value, document.getElementById('text-b').value)">Trocar!</button>
+    
+                        <p id="result-text-troca"></p>
+                    </div>
+                
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+
+
+          <!-- Modal Atividade 5-->
+          <div class="modal fade" id="modalAtividade5">
+            <div class="modal-dialog">
+                <div class="modal-content">
+            
+                    <div class="modal-header">
+                        <h4 class="modal-title">Atividade 5 - Nota</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+             
+                    <div class="modal-body">
+                        <input type="number" class="form-text form-control" id="text-nota1" placeholder="*Insira a primeira nota">
+                        <input type="number" class="form-text form-control" id="text-nota2" placeholder="*Insira a segunda nota">
+                        <input type="number" class="form-text form-control" id="text-nota3" placeholder="*Insira a terceira nota">
+                        <input type="number" class="form-text form-control" id="text-aulas" placeholder="*Insira a quantidade total de aulas">
+                        <input type="number" class="form-text form-control" id="text-faltas" placeholder="*Insira a quantidade de faltas do aluno">
+
+
+                        <button class="btn btn-success mt-1" type="submit"
+                         onclick="onClickNota(document.getElementById('text-nota1').value, document.getElementById('text-nota2').value,  document.getElementById('text-nota3').value, document.getElementById('text-aulas').value,  document.getElementById('text-faltas').value)">Calcular!</button>
+    
+                        <p id="result-text-nota"></p>
+                    </div>
+                
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+
+         <!-- Modal Atividade 6-->
+         <div class="modal fade" id="modalAtividade6">
+            <div class="modal-dialog">
+                <div class="modal-content">
+            
+                    <div class="modal-header">
+                        <h4 class="modal-title">Atividade 6 - Produto</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+             
+                    <div class="modal-body">
+                        <input type="number" class="form-text form-control" id="text-valor" placeholder="*Insira o valor do produto">
+                        <input type="number" class="form-text form-control" id="text-quantidade" placeholder="*Insira a quantidade do produto">
+
+                        <button class="btn btn-success mt-1" type="submit" onclick="onClickProduto(document.getElementById('text-valor').value, document.getElementById('text-quantidade').value)">Calcular Desconto!</button>
+    
+                        <p id="result-text-produto"></p>
+                    </div>
+                
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        //Lógica Atividade 1
+        function onClickMultiplication(number) {
+            verifyValue(number);
+        }
+
+        function verifyValue(number) {
+            if (isNaN(number)) {
+                return window.alert("não é numero " + number);
+            } else {
+                return calcMultiplication(parseInt(number));
+            }
+        }
+
+        function calcMultiplication(number) {
+            var i = 1;
+            var resultList = [number + " + " + i + " = " + number];
+
+            while (i < 10) {
+                i++;
+                resultList.push("<br>" + number + " + " + i + " = " + number * i);
+            }
+            document.getElementById("result-text").innerHTML = resultList;
+        }    
+
+        //Lógica Atividade 2
+        function onClickPar() {
+            var resultListPar = [];
+
+            for (let i = 1; i <= 100; i++) {
+                if (i % 2 === 0) {
+                    console.log(i);
+                    resultListPar.push(i + " ");
+                }
+            }
+
+            document.getElementById("result-text-par").innerHTML = resultListPar;
+        }
+
+        //Lógica Atividade 3
+        function onClickSomaParImpar() {
+            let somaP = 0;
+            let somaI = 0;
+
+            for (let i = 1; i <= 100; i++) {
+                if (i % 2 === 0) {
+                    somaP += i;
+                } else {
+                    somaI += i;
+                }
+            }
+
+            var resultSoma = "Soma dos números pares: " + somaP + "<br>" +
+            "Soma dos números ímpares: " + somaI;
+
+            document.getElementById("result-text-soma").innerHTML = resultSoma;
+        }
+
+        //Lógica Atividade 4 
+        function onClickTroca(a, b) {
+            let temp = a;
+            a = b;
+            b = temp;
+
+            var resultTroca = "Novo valor de a: " + a + "<br>" +
+            "Novo valor de b: " + b;
+
+            document.getElementById("result-text-troca").innerHTML = resultTroca;
+        }
+
+        //Lógica Atividade 5 
+
+        function onClickNota(nota1, nota2, nota3, aulasTotais, faltas) {
+            let media = (nota1 + nota2 + nota3) / 3;
+            let frequencia = ((aulasTotais - faltas) / aulasTotais) * 100;
+
+            if (media >= 7 && frequencia >= 75) {
+                document.getElementById("result-text-nota").innerHTML = "Aluno aprovado com média " + media.toFixed(2) + " e frequência de " + frequencia.toFixed(2) + "%";
+            } else if (media >= 4 && frequencia >= 75) {
+                document.getElementById("result-text-nota").innerHTML = "Aluno em recuperação com média " + media.toFixed(2) + " e frequência de " + frequencia.toFixed(2) + "%";
+            } else {
+                document.getElementById("result-text-nota").innerHTML = "Aluno reprovado com média " + media.toFixed(2) + " e frequência de " + frequencia.toFixed(2) + "%";
+            }
+        }
+
+        //Lógica Atividade 6
+        function onClickProduto(valor, quantidade) {
+            let desconto = 0;
+
+            if (valor > 1000 && quantidade > 100) {
+            desconto = 0.05;
+            }
+
+            if (valor > 5000 || quantidade > 500) {
+            desconto = 0.1;
+            }
+
+            let valorDesconto = valor * desconto;
+            let valorFinal = valor - valorDesconto;
+
+            document.getElementById("result-text-produto").innerHTML = "O valor do produto com desconto é R$ " + valorFinal.toFixed(2);
+        }
+    </script>
+</html>

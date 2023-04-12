@@ -1,0 +1,39 @@
+body {
+    background: #e1eab5;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.container {
+    position: relative;
+    margin: auto;
+    right: 25%;
+    left: 25%;
+}
+
+.button {
+    width: 40%;
+    color: #fe4b74;
+    border-radius: 15px;
+    border: 2px solid #fe4b74;
+    text-align: center;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    margin-top: 10px;
+}
+
+.button:hover {
+    color: white;
+    background-color: #fe4b74;
+    border-radius: 15px;
+    border: 2px solid #fe4b74;
+    transition: 1s;
+}
+
+.margin {
+    margin-bottom: 10px;
+}
